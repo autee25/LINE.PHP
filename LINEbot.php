@@ -1,13 +1,13 @@
 <?php 
   define('UPLOAD_DIR', 'tmp_image/');
-  /*Get Data From POST Http Request*/
-  $datas = file_get_contents('php://input');
-  /*Decode Json From LINE Data Body*/
-  $deCode = json_decode($datas,true);
+	/*Get Data From POST Http Request*/
+	$datas = file_get_contents('php://input');
+	/*Decode Json From LINE Data Body*/
+	$deCode = json_decode($datas,true);
 
-  file_put_contents('log.txt', file_get_contents('php://input') . PHP_EOL, FILE_APPEND);
+	file_put_contents('log.txt', file_get_contents('php://input') . PHP_EOL, FILE_APPEND);
 
-  $LINEDatas['token'] = "gwUWt2vU+ZiWUikmMISjk/5S48GLjG+56Tx3s0XEnUcvmRfC8DBqiklqgs0zlbR23CIHAyIT2d35U7meoR/67PksXwQwuBLP7DBQt320ZZyk45e0d8ZnAHrNwwdZ0j8+JSQ291aIqgd/b3Lf++bVrAdB04t89/1O/w1cDnyilFU=";
+  $LINEDatas['token'] = "IawcYaKBnjaxcA2Lzf8tKi2lvj+1Omj2tVnCeCiZg6hXq7Het6OrljcDTWflu2WFaJtpincSkoSIF+uTX+2jcwNKK7OYM5ILIqZDSM/cLIdsCpAq60JwhRHkYSfdMra55ou8YzkUY4M/lQusIi06RgdB04t89/1O/w1cDnyilFU=";
 
   $messageType = $deCode['events'][0]['message']['type'];
   if($messageType == 'image'){
@@ -52,4 +52,4 @@
 
     return $datasReturn;
   }
-?>
+?> 
